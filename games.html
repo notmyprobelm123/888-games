@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games - Solo Central</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #1c1f2b;
+      scroll-behavior: smooth;
+    }
+    #particles-js {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+    }
+    .sidebar {
+      width: 60px;
+      background: rgba(25, 28, 39, 0.95);
+      position: fixed;
+      height: 100%;
+      border-right: 1px solid #2a2d3a;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+    .sidebar .icon {
+      font-size: 24px;
+      margin: 20px 0;
+      color: #b0b4d2;
+      text-decoration: none;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .sidebar .icon:hover {
+      color: #ffffff;
+      transform: scale(1.2);
+    }
+    main {
+      margin-left: 80px;
+      padding: 40px 20px;
+      color: #b0b4d2;
+      position: relative;
+      z-index: 1;
+      animation: fadeInPage 1s forwards;
+      opacity: 0;
+    }
+    h1 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      animation: fadeDown 1.2s ease;
+    }
+    .game-category {
+      margin-bottom: 40px;
+    }
+    .game-category h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #6a95ff;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+    .game-card {
+      background: #2a2d3a;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: background 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    .game-card:hover {
+      background: #353849;
+      transform: translateY(-5px);
+    }
+    .game-card i {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #6a95ff;
+    }
+    .game-card span {
+      display: block;
+      font-size: 16px;
+      color: #b0b4d2;
+    }
+    @keyframes fadeInPage {
+      to { opacity: 1; }
+    }
+    @keyframes fadeDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <nav class="sidebar">
+    <a href="index.html" class="icon" title="Home"><i class="fas fa-home"></i></a>
+    <a href="games.html" class="icon" title="Games"><i class="fas fa-gamepad"></i></a>
+    <a href="setting.html" class="icon" title="Settings"><i class="fas fa-cog"></i></a>
+  </nav>
+
+  <main>
+    <h1>Games</h1>
+
+    <div class="game-category">
+      <h2>Action</h2>
+      <div class="game-grid">
+        <div class="game-card" onclick="location.href='games/1v1lol.html'">
+          <i class="fas fa-crosshairs"></i>
+          <span>1v1.lol</span>
+        </div>
+        <div class="game-card" onclick="location.href='games/fnaf1.html'">
+          <i class="fas fa-ghost"></i>
+          <span>FNAF 1</span>
+        </div>
+        <div class="game-card" onclick="location.href='games/geometry-dash.html'">
+          <i class="fas fa-music"></i>
+          <span>Geometry Dash</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-category">
+      <h2>Sports</h2>
+      <div class="game-grid">
+        <div class="game-card" onclick="location.href='games/retrobowl.html'">
+          <i class="fas fa-football-ball"></i>
+          <span>Retro Bowl</span>
+        </div>
+        <div class="game-card" onclick="location.href='games/basketball-stars.html'">
+          <i class="fas fa-basketball-ball"></i>
+          <span>Basketball Stars</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-category">
+      <h2>Racing</h2>
+      <div class="game-grid">
+        <div class="game-card" onclick="location.href='games/drive-mad.html'">
+          <i class="fas fa-car"></i>
+          <span>Drive Mad</span>
+        </div>
+        <div class="game-card" onclick="location.href='games/madalin-stunt-cars-2.html'">
+          <i class="fas fa-flag-checkered"></i>
+          <span>Madalin Stunt Cars 2</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-category">
+      <h2>Arcade & Platformers</h2>
+      <div class="game-grid">
+        <div class="game-card" onclick="location.href='games/slope.html'">
+          <i class="fas fa-circle-notch"></i>
+          <span>Slope</span>
+        </div>
+        <div class="game-card" onclick="location.href='games/ovo.html'">
+          <i class="fas fa-running"></i>
+          <span>OvO</span>
+        </div>
+        <div class="game-card" onclick="location.href='games/run3.html'">
+          <i class="fas fa-shoe-prints"></i>
+          <span>Run 3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-category">
+      <h2>Simulation</h2>
+      <div class="game-grid">
+        <div class="game-card" onclick="location.href='games/minecraft-classic.html'">
+          <i class="fas fa-cube"></i>
+          <span>Minecraft Classic</span>
+        </div>
+        <div class="game-card" onclick="location.href='games/bitlife.html'">
+          <i class="fas fa-heartbeat"></i>
+          <span>BitLife</span>
+        </div>
+        <div class="game-card" onclick="location.href='games/cookie-clicker.html'">
+          <i class="fas fa-cookie-bite"></i>
+          <span>Cookie Clicker</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-category">
+      <h2>Shooter</h2>
+      <div class="game-grid">
+        <div class="game-card" onclick="location.href='games/shell-shockers.html'">
+          <i class="fas fa-egg"></i>
+          <span>Shell Shockers</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#b0b4d2" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        move: { enable: true, speed: 1.5 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "grab" } }
+      }
+    });
+  </script>
+</body>
+</html>
